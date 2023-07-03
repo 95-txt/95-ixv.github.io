@@ -1,0 +1,334 @@
+@font-face {
+    font-family: thundervariable;
+    src: url(Thunder-VF.ttf);
+}
+*{
+    padding: 0;
+    margin: 0;
+    font-family: thundervariable;
+}
+.page{
+    height: 100vh;
+    width: 100vw;
+    background-color: aquamarine;
+}
+#pagea{
+    overflow: hidden;
+    color: #ffffff;
+    position: relative;
+    
+}
+.background{
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 11520px;
+    background: url("bg1.jpg") repeat-x;
+    animation: slide 25s linear infinite;
+    z-index: 0;
+}
+@keyframes slide{
+    0%{transform: translate3d(0, 0, 0);}
+    18%{transform: translate3d(0, 0, 0);}
+    20%{transform: translate3d(-1920px, 0, 0);}
+    38%{transform: translate3d(-1920px, 0, 0);}
+    40%{transform: translate3d(-3840px, 0, 0);}
+    58%{transform: translate3d(-3840px, 0, 0);}
+    60%{transform: translate3d(-5760px, 0, 0);}
+    78%{transform: translate3d(-5760px, 0, 0);}
+    80%{transform: translate3d(-7680px, 0, 0);}
+    98%{transform: translate3d(-7680px, 0, 0);}
+    100%{transform: translate3d(-9600px, 0, 0);}
+  }
+.greatings{
+    line-height: 1000%;
+    position: absolute;
+    right: clamp(5%,10%,10%);
+    margin-top: 20vh;
+    text-align: justify;
+    height: 40%;
+}
+#WELCOME{
+    
+    font-size: 10em;
+    animation-duration: 2s;
+    animation-name: changeLeangthw;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function:cubic-bezier(1, 0, 0, 1)
+}
+@keyframes changeLeangthw{
+    from{
+        font-weight: 900;
+        letter-spacing: 22px;
+    }
+    to {
+        font-weight: 50;
+        letter-spacing: 16px;
+    }
+}
+#VISITOR{
+    font-size: 15em;
+    font-weight: 900;
+    animation-duration: 2s;
+    animation-name: changeLeangthv;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function:cubic-bezier(1, 0, 0, 1)
+}
+@keyframes changeLeangthv{
+    from{
+        font-weight: 50;
+        letter-spacing: 5px;
+    }
+    to {
+        font-weight: 900;
+        letter-spacing: 1px;
+    }
+}
+#logo img{
+    position: relative;
+    width: 100px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+nav{
+    top: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+}
+.menu{
+    padding: 20px;
+    margin: 20px 20px;
+    text-align: right;
+}
+.menu ul li{
+    list-style: none;
+    margin: 0 0px;
+    display: inline-block;
+}
+.menu ul li a:hover {
+    padding: 12px;
+    font-weight: 550;
+}
+.menu ul li a {
+    margin: 8px;
+    padding: 10px;
+    /* color:#1A74E2; */
+    color: orange;
+    font-size: 1.2em;
+    font-weight: 350;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: all 0.3s ease-out;
+}
+.slidebtn{
+    width: auto;
+    position: absolute;
+    right: 10%;
+    bottom: 5vh;
+    text-align: right;
+}
+.slidebtn ul li{
+    margin: 2px;
+    border-radius: 3px;
+    display: inline-block;
+    height: auto;
+    background-color: #ffffff;
+    height: 3px;
+}
+.slidebtn ul li:active{
+    background-color: #cecece;
+}
+.slidebtn ul li a{
+    padding-inline: 15px;
+}
+
+
+#pageb{
+    background-color: white;
+}
+.myprofile{
+    height: 650px;
+    margin-left: 10%;
+    margin-top: 60px;
+    position: relative;
+}
+#myphoto{
+    width: 350px;
+    border: solid black 2px;
+    padding: 5px;
+    border-radius: 5px;
+}
+#myname{
+    position: absolute;
+    margin-right: 10%;
+    text-align: right;
+    top: 0;
+    right: 0;
+}
+#muhammed{
+    font-size: 8em;
+    font-weight: 200;
+    letter-spacing: 3vw;
+    margin-right: -3vw;
+}
+#sinan{
+    font-size: 20em;
+    font-weight: 900;
+    letter-spacing: 3.5vw;
+    margin-right: -3.5vw;
+}
+#myabout{
+    font-size: 2em;
+    margin-right: 10%;
+    margin-top: 10%;
+}
+
+
+#pagec{
+    background-color: black;
+    color: #ffffff;
+}
+.gallery{
+    width: 80vw;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 60px;
+    display: inline-flex;
+}
+.mainframe{
+    background-color: #ffffff00;
+    height: 650px;
+    width: 25vw;
+    margin-inline: 1vw;
+    position: relative;
+    overflow: hidden;
+}
+.mainframe img{
+    transition: 2s;
+    object-fit: cover;
+    height: 350px;
+    width: 100%;
+    transition: .2s ease;
+}
+.mainframe img:hover{
+    height: 500px;
+    cursor: pointer;
+}
+
+.mainframetitle{
+    margin-top: -15%;
+    margin-left: -.4vw;
+    width: 100%;
+    height: auto;
+    font-size: 12vw;
+    letter-spacing: .5vw;
+    font-weight: 100;
+}
+.mainframetext{
+    width: 100%;
+    font-weight: 200;
+    font-size: 1.5em;
+    margin-top: 5%;
+}
+
+#paged{
+    background-color: white;
+}
+#pagez{
+    background-color: black;
+    color: #ffffff;
+    position: relative;
+}
+.qr{
+    position: absolute;
+    background-color: aqua;
+    right: 10%;
+    top: 20vmin;
+    border: solid 20px #ffffff;
+}
+.qr img{
+    height: 20vmax;
+    width: 20vmax;
+    object-fit: cover;
+    
+}
+.textboxes{
+    width: 50%;
+    position: absolute;
+    margin-top: 60px;
+    display: inline-flex;
+    flex-direction: column;
+    left: 10%;
+}
+.inputbox{
+    background-color: #101010;
+    width: 100%;
+    padding: 10px 20px;
+    padding-top: 17px;
+    margin: 4px 0;
+    display: inline-block;
+    border: 1px solid #88888845;
+    box-sizing: border-box;
+    font-size: 2em;
+    font-weight: 300;
+    border-radius: 2px;
+    box-sizing: border-box;
+    color: #ffffff;
+    opacity: 1;
+    outline: none;
+}
+textarea {
+    resize: none;
+}
+input:focus {
+    border: 1px solid #505050;
+  }
+input:hover{
+    opacity: 0.9;
+}
+button {
+    background-color: #222222;
+    color: rgb(255, 255, 255);
+    padding: 14px 20px;
+    padding-top: 22px;
+    margin: 8px 0;
+    cursor: pointer;
+    width: 100%;
+    font-size: 2em;
+    border-radius: 2px;
+    border: 1px solid #ffa50030;
+}
+button:hover {
+    opacity: 0.8;
+}
+.notification{
+    padding: 20px 20vw;
+    position: absolute;
+    background-color: #222222;
+    border: 1px solid #ffa50030;
+    border-radius: 2px;
+    animation: none ;
+    display: none;
+}
+@keyframes inandout{
+    0%{transform: translatex(-50vw);}
+    20%{transform: translatex(10vw);}
+    80%{transform: translatex(10vw);}
+    100%{transform: translatex(-50vw);}
+  }
+.head:hover{
+    font-variation-settings: 'ital' 15;
+}
+.head{
+    font-variation-settings: 'ital' 0;
+    font-weight: 400;
+    font-size: 2em;
+    padding: 30px;
+    padding-top: 40px;
+    padding-left: 10%;
+    letter-spacing: 10px;
+    transition: 0.3s;
+}

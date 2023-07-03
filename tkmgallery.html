@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        @font-face {
+            font-family: thundervariable;
+            src: url(Thunder-VF.ttf);
+        }
+        * {
+          box-sizing: border-box;
+        }
+        
+        body {
+          font-family: thundervariable;
+          margin: 0;
+          background-color: black;
+          color: white;
+        }
+
+        
+
+        .dark-mode {
+            background-color: white;
+            color: black;
+        }
+        
+        .header {
+          text-align: center;
+          padding: 32px;
+        }
+        
+        .row {
+          display: -ms-flexbox; /* IE 10 */
+          display: flex;
+          -ms-flex-wrap: wrap; /* IE 10 */
+          flex-wrap: wrap;
+          padding: 0 4px;
+        }
+        
+        /* Create two equal columns that sits next to each other */
+        .column {
+          -ms-flex: 25%; /* IE 10 */
+          flex: 25%;
+          padding: 0 4px;
+        }
+        
+        .column img {
+          width: 100%;
+          margin-top: 8px;
+          vertical-align: middle;
+        }
+
+        .column img:hover{
+            cursor: pointer;
+            box-shadow: 0px 2px 15px -5px;
+            scale: 101%;
+            /* outline: 2px solid;
+            outline-offset: 2px; */
+        }
+        
+        /* Style the buttons */
+        .btn {
+          border-radius: 5px;
+          border: none;
+          outline: none;
+          padding: 10px 16px;
+          background-color: #212121;
+          color: white;
+          cursor: pointer;
+          font-size: 18px;
+        }
+        .dark {
+          border-radius: 5px;
+          border: none;
+          outline: none;
+          padding: 10px 16px;
+          background-color: #f0f0f0;
+          color: black;
+          cursor: pointer;
+          font-size: 18px;
+        }
+        .btn:hover {
+          opacity: .8;
+        }
+        
+        
+        .preview {
+            position: fixed;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+        }
+        .preview img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 20px #000000;
+            max-width: 80vw;
+            max-height: 80vh;
+        }
+        .preview button{
+            position: absolute;
+            top: 7%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2em;
+            background: none;
+            border: none;
+            color: #f0f0f0;
+        }
+        
+        </style>
+</head>
+
+
+
+
+
+
+
+<body>
+
+    <div id="preview" class="preview" >
+        <img id="previewimg" src="/tkmgalley/1.jpg" alt="">
+        <button id="closepreview">
+            X
+        </button>
+    </div>
+
+    <div class="header" id="myHeader">
+        <h1 style="font-size: 5em;">WELCOME TO MY TKM GALLERY</h1>
+        <button id="darkbtn" class="btn" onclick="dark()">&#x2600</button>
+        <p>Click on the buttons to change the view.</p>
+        
+      </div>
+    
+      <!-- Photo Grid -->
+<div class="row"> 
+    <div class="column">
+      <img onclick="preview(this.src)" src="/tkmgalley/1.jpg">
+      <img onclick="preview(this.src)" src="/tkmgalley/2.jpg">
+      <img onclick="preview(this.src)" src="/tkmgalley/3.jpg">
+      <img onclick="preview(this.src)" src="/tkmgalley/4.jpg">
+      <img onclick="preview(this.src)" src="/tkmgalley/5.jpg">
+      <img onclick="preview(this.src)" src="/tkmgalley/6.png">
+      <img onclick="preview(this.src)" src="/tkmgalley/7.jpg">
+    </div>
+    <div class="column">
+      <img onclick="preview(this.src)" src="/tkmgalley/8.jpg">
+      <img onclick="preview(this.src)" src="/tkmgalley/9.jpg">
+      <img onclick="preview(this.src)" src="/tkmgalley/10.jpg">
+      <img onclick="preview(this.src)" src="/tkmgalley/11.jpg">
+      <img onclick="preview(this.src)" src="/tkmgalley/12.jpg">
+      <img onclick="preview(this.src)" src="/tkmgalley/13.jpg">
+    </div>  
+    <div class="column">
+      <img onclick="preview(this.src)" src="/tkmgalley/14.jpg">
+      <img onclick="preview(this.src)" src="/tkmgalley/15a.jpg">
+      <img onclick="preview(this.src)" src="/tkmgalley/16.jpg">
+      <img onclick="preview(this.src)" src="/tkmgalley/17.jpg">
+      <img onclick="preview(this.src)" src="/tkmgalley/18.jpg">
+      <img onclick="preview(this.src)" src="/tkmgalley/19.jpg">
+      <img onclick="preview(this.src)" src="/tkmgalley/20.jpg">
+    </div>
+    <div class="column">
+      <img onclick="preview(this.src)" src="/tkmgalley/21.jpg">
+      <img onclick="preview(this.src)" src="/tkmgalley/22.jpg">
+      <img onclick="preview(this.src)" src="/tkmgalley/23.jpg">
+      <img onclick="preview(this.src)" src="/tkmgalley/24.jpg">
+      <img onclick="preview(this.src)" src="/tkmgalley/25.jpg">
+      <img onclick="preview(this.src)" src="/tkmgalley/26.png">
+    </div>
+  </div>
+  
+
+
+
+
+
+
+  <script>
+    // Get the elements with class="column"
+    var elements = document.getElementsByClassName("column");
+    
+    // Declare a loop variable
+    var i;
+    
+    // Full-width images
+    function one() {
+        for (i = 0; i < elements.length; i++) {
+        elements[i].style.msFlex = "100%";  // IE10
+        elements[i].style.flex = "100%";
+      }
+    }
+    
+    // Two images side by side
+    function two() {
+      for (i = 0; i < elements.length; i++) {
+        elements[i].style.msFlex = "50%";  // IE10
+        elements[i].style.flex = "50%";
+      }
+    }
+    
+    // Four images side by side
+    function four() {
+      for (i = 0; i < elements.length; i++) {
+        elements[i].style.msFlex = "25%";  // IE10
+        elements[i].style.flex = "25%";
+      }
+    }
+    
+    function dark() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+        var btn = document.getElementById ("darkbtn");
+        btn.classList.toggle("dark");
+        if(btn.innerHTML==="☾"){
+            btn.innerHTML="&#x2600";
+        } else {btn.innerHTML="&#9790"}
+    }
+
+
+    
+    function preview(psrc){
+        document.getElementById("previewimg").src=psrc;
+        document.getElementById("preview").style.display="block"
+    }
+    closepreview.addEventListener("click", function () {
+        document.getElementById("preview").style.display="none"
+        });
+
+    </script>
+</body>
+</html>

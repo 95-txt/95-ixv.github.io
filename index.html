@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sinan's portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="menu">
+            <ul>
+                <li><a onclick="gotoPagea()" id="btna" href="#a">TOP</a></li>
+                <li><a onclick="gotoPageb()" id="btnb" href="#b">ABOUT ME</a></li>
+                <li><a onclick="gotoPagec()" id="btnc" href="#c">GALLERY</a></li>
+                <li><a onclick="gotoPaged()" id="btnd" href="#d">OOO</a></li>
+                <li><a onclick="gotoPagez()" id="btnz" href="#z">CONTACT ME</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div id="pages">
+        <div class="page" id="pagea">
+            <div class="background"></div>
+            <div id="logo">
+                <img src="logo.png" alt="">
+            </div>
+            <div class="greatings">
+                <p id="WELCOME">WELCOME</p>
+                <p id="VISITOR">VISITOR</p>
+            </div>
+            <div class="slidebtn">
+                <ul>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </div>
+            
+            
+        </div>
+        <div class="page" id="pageb">
+            <p class="head">ME SELF</P>
+            <div class="myprofile">
+                <img id="myphoto" src="IMG_4126.jpg" alt="">
+                <div id="myname">
+                    <p id="muhammed">MUHAMMED</p>
+                    <p id="sinan">SINAN</p>
+                </div>
+                <div id="myabout">
+                    <p>born in omassery,kerala,INDIA. live in koduvally,INDIA. i study computer science engineering in TKM college of engineering kollam,INDIA. i make posters,websites. i like to play games,travel,explore.</p>
+                </div>
+            </div>
+            
+
+        </div>
+        <div class="page" id="pagec">
+            <p class="head">GALLERY</P>
+            <div class="gallery">
+                <div class="mainframe">
+                    <a href="tkmgallery.html"><img src="/tkmgalley/13.jpg" alt=""></a>
+                    <p class="mainframetitle">poster</p>
+                    <p class="mainframetext">born in omassery, kerala, INDIA. live in koduvally,INDIA. i study computer science engineering in TKM college of engineering kollam,INDIA. i make posters,websites. i like to play games,travel,explore.</p>
+                </div>
+                <div class="mainframe">
+                    <a href="tkmgallery.html"><img src="IMG_4126.jpg" alt=""></a>
+                    <p class="mainframetitle">poster</p>
+                    <p class="mainframetext">born in omassery, kerala, INDIA. live in koduvally,INDIA. i study computer science engineering in TKM college of engineering kollam,INDIA. i make posters,websites. i like to play games,travel,explore.</p>
+                </div>
+                <div class="mainframe">
+                    <a href="tkmgallery.html"><img src="IMG_4126.jpg" alt=""></a>
+                    <p class="mainframetitle">poster</p>
+                    <p class="mainframetext">born in omassery, kerala, INDIA. live in koduvally,INDIA. i study computer science engineering in TKM college of engineering kollam,INDIA. i make posters,websites. i like to play games,travel,explore.</p>
+                </div>
+
+            </div>
+
+
+        </div>
+        <div class="page" id="paged">
+            <p class="head">OOO</P>
+        </div>
+        <div class="page" id="pagez">
+            <p class="head">OOO YOU ARE INTRESTED...</P>
+            <div class="messageme">
+                <form id="myForm" onsubmit="return ajaxpost()" action="" autocomplete="off">
+                    <div class="textboxes">
+                        <input class="inputbox" type="text" placeholder="name" name="name">
+                        <input class="inputbox" type="text" placeholder="from" name="address">
+                        <input class="inputbox" type="tel" name="number" placeholder="8888888888" pattern="[0-9]{10}" maxlength="10"  title="phone number" />   
+                        <textarea class="inputbox" placeholder="message" name="message" id="" cols="30" rows="9"></textarea>
+                        <button type="submit">SEND</button>
+                    </div>
+                </form>
+                <div id="notification" class="notification">
+                    message sent .
+                </div>
+                <div class="qr">
+                    <img src="IMG_4126.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    <script src="script.js"></script>
+</body>
+</html>
